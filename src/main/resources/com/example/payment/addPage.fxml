@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.payment.AddPage">
+   <children>
+      <Label layoutX="101.0" layoutY="42.0" prefHeight="17.0" prefWidth="205.0" text="Додати квитанцію" textAlignment="CENTER">
+         <font>
+            <Font name="Microsoft Sans Serif" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="103.0" prefHeight="17.0" prefWidth="56.0" text="Назва" />
+      <Label layoutX="14.0" layoutY="146.0" prefHeight="17.0" prefWidth="40.0" text="Тариф" />
+      <Label layoutX="14.0" layoutY="192.0" prefHeight="17.0" prefWidth="76.0" text="Попередній" />
+      <Label layoutX="14.0" layoutY="236.0" prefHeight="17.0" prefWidth="76.0" text="Поточний" />
+      <Label layoutX="14.0" layoutY="273.0" prefHeight="17.0" prefWidth="105.0" text="Назва Лічильника" />
+      <TextField fx:id="text_name" layoutX="129.0" layoutY="99.0" />
+      <TextField fx:id="text_tariff" layoutX="129.0" layoutY="142.0" />
+      <TextField fx:id="text_prev" layoutX="129.0" layoutY="188.0" />
+      <TextField fx:id="text_curr" layoutX="129.0" layoutY="232.0" />
+      <TextField fx:id="text_count" layoutX="129.0" layoutY="269.0" />
+      <Button fx:id="btn_add" layoutX="83.0" layoutY="338.0" mnemonicParsing="false" onAction="#AddHandler" prefHeight="25.0" prefWidth="149.0" text="Додати" />
+   </children>
+</AnchorPane>
