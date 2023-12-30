@@ -8,12 +8,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
+    public void start() throws IOException {
+        start(null);
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 332, 550);
         stage.setResizable(false);
-        stage.setTitle("Квитанції!");
+        stage.setTitle("Авторизація");
         stage.setScene(scene);
         stage.show();
     }

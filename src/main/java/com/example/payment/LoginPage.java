@@ -79,6 +79,7 @@ public class LoginPage {
 
             // Получение текущего Stage (окна)
             Stage stage = (Stage) btn_entry.getScene().getWindow();
+            stage.setTitle("Меню");
             stage.setResizable(false);
 
             // Установка новой сцены в Stage

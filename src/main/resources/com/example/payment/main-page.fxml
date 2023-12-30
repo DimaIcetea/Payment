@@ -4,56 +4,77 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
-<AnchorPane prefHeight="400.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.payment.MainPage">
-   <children>
-       <TableView fx:id="table_list" prefHeight="211.0" prefWidth="775.0">
-           <columns>
-               <TableColumn text="Назва" fx:id="columnName" prefWidth="120" >
-                   <cellValueFactory>
-                       <PropertyValueFactory property="name"/>
-                   </cellValueFactory>
-               </TableColumn>
-               <TableColumn text="Тариф" fx:id="columnTariff" prefWidth="100">
-                   <cellValueFactory>
-                       <PropertyValueFactory property="tariff"/>
-                   </cellValueFactory>
-               </TableColumn>
-               <TableColumn text="Попередній" fx:id="columnPrev" prefWidth="100">
-                   <cellValueFactory>
-                       <PropertyValueFactory property="prev"/>
-                   </cellValueFactory>
-               </TableColumn>
-               <TableColumn text="Поточний" fx:id="columnCurr" prefWidth="100">
-                   <cellValueFactory>
-                       <PropertyValueFactory property="curr"/>
-                   </cellValueFactory>
-               </TableColumn>
-               <TableColumn text="Лічильник" fx:id="columnCount" prefWidth="100">
-                   <cellValueFactory>
-                       <PropertyValueFactory property="count"/>
-                   </cellValueFactory>
-               </TableColumn>
-               <TableColumn text="Різниця" fx:id="columnMinus" prefWidth="100">
-                   <cellValueFactory>
-                       <PropertyValueFactory property="difference"/>
-                   </cellValueFactory>
-               </TableColumn>
-               <TableColumn text="До сплати" fx:id="columnPay" prefWidth="100">
-                   <cellValueFactory>
-                       <PropertyValueFactory property="pay"/>
-                   </cellValueFactory>
-               </TableColumn>
-           </columns>
-       </TableView>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-       <Label layoutX="34.0" layoutY="274.0" prefHeight="17.0" prefWidth="157.0" text="Додати квитанцію" />
-      <Label layoutX="207.0" layoutY="274.0" prefHeight="17.0" prefWidth="135.0" text="Редагувати квитанцію" />
-      <Label layoutX="374.0" layoutY="274.0" prefHeight="17.0" prefWidth="113.0" text="Видалити квитанцію" />
-      <Button fx:id="btn_add" layoutX="34.0" layoutY="315.0" mnemonicParsing="false" onAction="#add_click" prefHeight="25.0" prefWidth="113.0" text="Додати" />
-      <Button fx:id="btn_edit" layoutX="207.0" layoutY="315.0" mnemonicParsing="false" onAction="#editHandler" prefHeight="25.0" prefWidth="125.0" text="Редагувати" />
-      <Button fx:id="btn_delete" layoutX="373.0" layoutY="315.0" mnemonicParsing="false" onAction="#deleteHandler" prefHeight="25.0" prefWidth="119.0" text="Видалити" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.payment.MainPage">
+    <TableView fx:id="table_list" prefHeight="211.0" prefWidth="775.0">
+        <columns>
+            <TableColumn fx:id="columnName" prefWidth="120" text="Назва">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="columnTariff" prefWidth="100" text="Тариф">
+                <cellValueFactory>
+                    <PropertyValueFactory property="tariff" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="columnPrev" prefWidth="100" text="Попередній">
+                <cellValueFactory>
+                    <PropertyValueFactory property="prev" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="columnCurr" prefWidth="100" text="Поточний">
+                <cellValueFactory>
+                    <PropertyValueFactory property="curr" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="columnCount" prefWidth="100" text="Лічильник">
+                <cellValueFactory>
+                    <PropertyValueFactory property="count" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="columnMinus" prefWidth="100" text="Різниця">
+                <cellValueFactory>
+                    <PropertyValueFactory property="difference" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="columnPay" prefWidth="100" text="До сплати">
+                <cellValueFactory>
+                    <PropertyValueFactory property="pay" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <Label fx:id="text1" layoutX="34.0" layoutY="274.0" prefHeight="17.0" prefWidth="157.0" text="Додати квитанцію" />
+    <Label fx:id="text2" layoutX="207.0" layoutY="274.0" prefHeight="17.0" prefWidth="135.0" text="Редагувати квитанцію" />
+    <Label fx:id="text3" layoutX="374.0" layoutY="274.0" prefHeight="17.0" prefWidth="113.0" text="Видалити квитанцію" />
+    <Button fx:id="btn_add" layoutX="34.0" layoutY="315.0" mnemonicParsing="false" onAction="#add_click" prefHeight="25.0" prefWidth="113.0" text="Додати" />
+    <Button fx:id="btn_edit" layoutX="207.0" layoutY="315.0" mnemonicParsing="false" onAction="#editHandler" prefHeight="25.0" prefWidth="125.0" text="Редагувати" />
+    <Button fx:id="btn_delete" layoutX="373.0" layoutY="315.0" mnemonicParsing="false" onAction="#deleteHandler" prefHeight="25.0" prefWidth="119.0" text="Видалити" />
+    <Label fx:id="label_edit" layoutX="90.0" layoutY="38.0" prefHeight="17.0" prefWidth="205.0" text="Редагувати квитанцію" textAlignment="CENTER">
+        <font>
+            <Font name="Microsoft Sans Serif" size="12.0" />
+        </font>
+    </Label>
+    <Label fx:id="label_name" layoutX="14.0" layoutY="103.0" prefHeight="17.0" prefWidth="56.0" text="Назва" />
+    <Label fx:id="label_tariff" layoutX="14.0" layoutY="146.0" prefHeight="17.0" prefWidth="40.0" text="Тариф" />
+    <Label fx:id="label_prev" layoutX="14.0" layoutY="192.0" prefHeight="17.0" prefWidth="76.0" text="Попередній" />
+    <Label fx:id="label_curr" layoutX="14.0" layoutY="236.0" prefHeight="17.0" prefWidth="76.0" text="Поточний" />
+    <Label fx:id="label_count" layoutX="14.0" layoutY="273.0" prefHeight="17.0" prefWidth="105.0" text="Назва Лічильника" />
+    <TextField fx:id="text_name" layoutX="129.0" layoutY="99.0" />
+    <TextField fx:id="text_tariff" layoutX="129.0" layoutY="142.0" />
+    <TextField fx:id="text_prev" layoutX="129.0" layoutY="188.0" />
+    <TextField fx:id="text_curr" layoutX="129.0" layoutY="232.0" />
+    <TextField fx:id="text_count" layoutX="129.0" layoutY="269.0" />
+    <Button fx:id="btn_update" layoutX="83.0" layoutY="390.0" mnemonicParsing="false" onAction="#UpdateHandler" prefHeight="25.0" prefWidth="149.0" text="Оновити" />
+   <Label layoutX="546.0" layoutY="228.0" prefHeight="33.0" prefWidth="215.0" text="Поточні тарифи:" textAlignment="JUSTIFY" underline="true" />
+   <Label layoutX="546.0" layoutY="265.0" prefHeight="17.0" prefWidth="97.0" text="Вода: 24грн./куб" />
+   <Label layoutX="546.0" layoutY="294.0" prefHeight="17.0" prefWidth="174.0" text="Електроенергія: 35 грн./клвт" />
+   <Label layoutX="546.0" layoutY="319.0" prefHeight="17.0" prefWidth="157.0" text="Газ: 13 грн./куб" />
+   <Label layoutX="293.0" layoutY="393.0" prefHeight="17.0" prefWidth="478.0" text="За більш детальною інформацією звертайтеся за ном. телефону: +380(68)111-11-11" />
 </AnchorPane>

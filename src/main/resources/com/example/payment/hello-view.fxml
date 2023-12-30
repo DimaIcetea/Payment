@@ -7,11 +7,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="332.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.payment.LoginPage">
    <children>
-      <Label layoutX="13.0" layoutY="16.0" prefHeight="48.0" prefWidth="294.0" text="                                      Логін" textAlignment="CENTER" />
+      <Label layoutX="126.0" layoutY="14.0" prefHeight="48.0" prefWidth="71.0" text="Авторизація" textAlignment="CENTER" />
       <Button fx:id="btn_entry" layoutX="114.0" layoutY="422.0" mnemonicParsing="false" onAction="#loginToAccount" prefHeight="25.0" prefWidth="105.0" text="Увійти" />
       <TextField fx:id="text_login" layoutX="14.0" layoutY="125.0" prefHeight="25.0" prefWidth="294.0" />
       <TextField fx:id="text_pass" layoutX="14.0" layoutY="215.0" prefHeight="25.0" prefWidth="294.0" />
       <Label layoutX="99.0" layoutY="108.0" prefHeight="17.0" prefWidth="141.0" text="             Логін" />
       <Label layoutX="84.0" layoutY="198.0" prefHeight="17.0" prefWidth="161.0" text="                Пароль" />
+      <Label layoutX="12.0" layoutY="271.0" prefHeight="17.0" prefWidth="309.0" text="Для отримання логіну та паролю від Вашого кабінету, " />
+      <Label layoutX="15.0" layoutY="288.0" prefHeight="17.0" prefWidth="309.0" text="зверніться до найближчої відповідної держ. служби" />
+      <Label layoutX="14.0" layoutY="305.0" prefHeight="17.0" prefWidth="214.0" text="Або на сайт: www.gos-posluga.ua" />
    </children>
 </AnchorPane>
